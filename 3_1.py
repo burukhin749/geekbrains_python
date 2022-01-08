@@ -1,4 +1,4 @@
-numbers = {'zero': 'ноль',
+words = {'zero': 'ноль',
            'one': 'один',
            'two': 'два',
            'three': 'три',
@@ -12,7 +12,7 @@ numbers = {'zero': 'ноль',
 
 
 def num_translate(word):
-    return numbers.get(word)
+    return words.get(word)
 
 
 print(num_translate(input('Введите число на английском (в нижнем регистре): ')))
