@@ -7,7 +7,7 @@ def currency_rates(code):
     content = responce.split("<Valute ID=")
     for i in content:
         if code.upper() in i:
-            print(code.upper(), end=" ")
+            print(code.upper(), end=": ")
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
 
