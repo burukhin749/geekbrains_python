@@ -1,3 +1,4 @@
+from sys import argv
 from datetime import datetime
 from requests import get, utils
 
