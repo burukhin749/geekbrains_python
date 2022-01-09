@@ -10,7 +10,7 @@ def currency_rates(code):
     for i in content:
         if code.upper() in i:
             print(datetime.strptime(content[0].split('"')[-4], '%d.%m.%Y').date(), ", ", sep="", end="")
-            print(code.upper(), end=", ")
+            print(code.upper(), end=": ")
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
 
