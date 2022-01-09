@@ -1,3 +1,4 @@
+from sys import argv
 from datetime import datetime
 from requests import get, utils
 
@@ -13,6 +14,10 @@ def currency_rates(code):
             print(code.upper(), end=", ")
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
-if __name__ == "__main__":
-    print(currency_rates("uSd"))
-    print(currency_rates("EUR"))
+
+print(currency_rates("uSd"))
+print(currency_rates("EUR"))
+
+if __name__ == "--main__":
+    word = argv[1]
+    print(currency_rates(word))
