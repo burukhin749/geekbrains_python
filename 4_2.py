@@ -8,7 +8,7 @@ def currency_rates(code):
     for i in content:
         if code.upper() in i:
             print(code.upper(), end=" ")
-            print(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
+            return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
 
 print(currency_rates("uSd"))
