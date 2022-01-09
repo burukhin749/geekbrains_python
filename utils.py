@@ -13,6 +13,7 @@ def currency_rates(code):
             print(code.upper(), end=", ")
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
+
 if __name__ == "__main__":
-    print(currency_rates("uSd"))
-    print(currency_rates("EUR"))
+    word = argv[1]
+    print(currency_rates(word))

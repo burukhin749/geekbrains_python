@@ -15,9 +15,6 @@ def currency_rates(code):
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
 
 
-print(currency_rates("uSd"))
-print(currency_rates("EUR"))
-
-if __name__ == "--main__":
-    word = argv[1]
-    print(currency_rates(word))
+# if __name__ == "__main__":
+#     word = argv[1]
+#     print(currency_rates(word))
