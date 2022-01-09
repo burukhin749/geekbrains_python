@@ -12,7 +12,3 @@ def currency_rates(code):
             print(datetime.strptime(content[0].split('"')[-4], '%d.%m.%Y').date(), ", ", sep="", end="")
             print(code.upper(), end=", ")
             return float(i.replace("/", "").split("<Value>")[-2].replace(",", "."))
-
-
-print(currency_rates("uSd"))
-print(currency_rates("EUR"))
